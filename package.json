@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@amap/amap-jsapi-types": "^0.0.13",
+    "@element-plus/nuxt": "^1.0.7",
+    "@nuxt/devtools": "latest",
+    "element-plus": "^2.4.3",
+    "nuxt": "^3.8.2",
+    "sass": "^1.69.5",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue": "^3.3.10",
+    "vue-router": "^4.2.5"
+  }
+}

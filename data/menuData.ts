@@ -166,7 +166,7 @@ const menuDataList = [
 			{
 				title: "Chatbot UI",
 				logo: ChatbotUi,
-				url: "https://chat.aivvm.com/zh"
+				url: "https://chat.aivvm.com/chat"
 			}
 		]
 	}

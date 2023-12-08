@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { ElScrollbar } from "element-plus";
 import menuDataList from "@/data/menuData";
-import { ref, onMounted, nextTick } from "vue";
-import { Fold, Expand } from "@element-plus/icons-vue";
+import { Fold } from "@element-plus/icons-vue";
 
 useSeoMeta({
 	title: "神奇导航",
@@ -13,34 +12,16 @@ useSeoMeta({
 	twitterCard: "summary_large_image"
 });
 
-// 是否折叠菜单
-const isCollapse = ref(false);
-
 // 获取滚动条真实的dom元素
 const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>();
 
-// 菜单
-const menuData = markRaw<
-	Array<{
-		title: string;
-		index?: string;
-		icon: typeof Fold;
-		children: Array<{
-			logo?: string;
-			icon?: string;
-			title: string;
-			url: string;
-		}>;
-	}>
->(menuDataList);
-
 // 跳转到点击的导航块
-const handleSelect = (key: string) => {
+const handleSelect = (index: string) => {
 	// 跳转到对应的导航块
 	nextTick(() =>
 		scrollbarRef.value!.scrollTo({
 			behavior: "smooth",
-			top: scrollHeightArr.value[key as unknown as number]
+			top: scrollHeightArr.value[index as unknown as number]
 		})
 	);
 };
@@ -81,44 +62,13 @@ onMounted(() => {
 <template>
 	<ClientOnly>
 		<el-container class="layout-container">
-			<el-aside width="auto">
-				<el-scrollbar>
-					<el-menu
-						class="el-menu-vertical-demo"
-						default-active="2"
-						text-color="#979898"
-						active-text-color="#fff"
-						background-color="#2c2e2f"
-						:collapse="isCollapse"
-						@select="handleSelect"
-					>
-						<template v-for="item in menuData" :key="item.index">
-							<el-menu-item :index="item.index">
-								<el-icon><component :is="item.icon"></component></el-icon>
-								<template #title>{{ item.title }}</template>
-							</el-menu-item>
-						</template>
-					</el-menu>
-				</el-scrollbar>
-			</el-aside>
+			<TheAside @handle-select="handleSelect" />
 
-			<el-container>
-				<el-header class="el-header">
-					<div @click="isCollapse = !isCollapse" class="el-header-iscollapse">
-						<el-icon v-if="isCollapse" title="展开"><Expand /></el-icon>
-						<el-icon v-else title="收起"><Fold /></el-icon>
-					</div>
-					<el-link
-						:underline="false"
-						href="https://element-plus.org"
-						target="_blank"
-						><SvgIcon name="github" />GitHub</el-link
-					>
-				</el-header>
-
+			<el-container direction="vertical">
+				<TheHeader />
 				<el-main>
 					<el-scrollbar ref="scrollbarRef">
-						<template v-for="menu in menuData" :key="menu.title">
+						<template v-for="menu in menuDataList" :key="menu.title">
 							<div class="main-container" ref="navBlockItem">
 								<h4>{{ menu.title }}</h4>
 								<div class="main-container-content">
@@ -131,15 +81,14 @@ onMounted(() => {
 										<el-image
 											v-if="menuChildren.logo"
 											lazy
-											style="width: 50px; height: 50px"
+											class="main-container-content-card-icon"
 											:src="menuChildren.logo"
 											fit="fill"
 										/>
 										<SvgIcon
 											v-else
-											:name="menuChildren.icon"
-											color="color: rgb(8 126 164)"
-											style="width: 50px; height: 50px"
+											:name="(menuChildren.icon as string)"
+											class="main-container-content-card-icon"
 										/>
 										<span class="main-container-content-card-span">{{
 											menuChildren.title
@@ -158,28 +107,9 @@ onMounted(() => {
 <style scoped lang="scss">
 .layout-container {
 	height: 100vh;
-	.el-menu-vertical-demo:not(.el-menu--collapse) {
-		width: 200px;
-		min-height: 400px;
-	}
-	.el-aside {
-		background: #2c2e2f;
-		.el-menu {
-			border-right: none;
-		}
-	}
-	.el-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border-bottom: 1px solid #dcdfe6;
-		.el-header-iscollapse:hover {
-			cursor: pointer;
-			color: #409eff;
-		}
-	}
 	.el-main {
 		padding: unset;
+		height: auto;
 		.main-container {
 			margin: 20px;
 			h4 {
@@ -199,6 +129,10 @@ onMounted(() => {
 					&:hover {
 						transform: translateY(-5px);
 						box-shadow: var(--el-box-shadow-dark);
+					}
+					.main-container-content-card-icon {
+						width: 50px;
+						height: 50px;
 					}
 
 					.main-container-content-card-span {

@@ -121,6 +121,11 @@ const menuDataList = [
 		icon: IconMenu,
 		children: [
 			{
+				title: "现代 JavaScript 教程",
+				logo: "https://zh.javascript.info/img/favicon/favicon.png",
+				url: "https://zh.javascript.info"
+			},
+			{
 				title: "ES6 入门教程",
 				logo: "https://es6.ruanyifeng.com/favicon.ico",
 				url: "https://es6.ruanyifeng.com"
@@ -132,9 +137,14 @@ const menuDataList = [
 		icon: IconMenu,
 		children: [
 			{
+				title: "Webpack",
+				logo: "https://webpack.docschina.org/icon-square-small.85ba630cf0c5f29ae3e3.svg",
+				url: "https://webpack.docschina.org"
+			},
+			{
 				title: "Vite",
 				logo: "https://cn.vitejs.dev/logo.svg",
-				url: "https://cn.vitejs.dev/"
+				url: "https://cn.vitejs.dev"
 			},
 			{
 				title: "Vitest",
@@ -155,7 +165,7 @@ const menuDataList = [
 			{
 				title: "樱花动漫",
 				logo: "https://oss-cdn.meowa.cn/mxtheme/images/favicon.png",
-				url: "https://www.yinhuadm.cc/"
+				url: "https://www.yinhuadm.cc"
 			}
 		]
 	},
@@ -175,4 +185,5 @@ const menuDataList = [
 menuDataList.forEach((item, index) => {
 	Object.assign(item, { index: index + "" });
 });
+
 export default menuDataList;

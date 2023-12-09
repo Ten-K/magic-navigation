@@ -138,8 +138,13 @@ const menuDataList = [
 		children: [
 			{
 				title: "Webpack",
-				logo: "https://webpack.docschina.org/icon-square-small.85ba630cf0c5f29ae3e3.svg",
+				icon: "webpack",
 				url: "https://webpack.docschina.org"
+			},
+			{
+				title: "Rollup",
+				logo: "https://cn.rollupjs.org/favicon.png",
+				url: "https://cn.rollupjs.org/"
 			},
 			{
 				title: "Vite",

@@ -1,4 +1,5 @@
 export const useDark = () => {
+	if (!process.client) return { isDark: false };
 	const isDark = useState("isDark", () =>
 		document.documentElement.classList.contains("dark")
 	);

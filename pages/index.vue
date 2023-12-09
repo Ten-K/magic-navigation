@@ -51,6 +51,8 @@ const getScrollHeightArr = () => {
 	});
 };
 
+const { isDark } = useDark();
+
 onMounted(() => {
 	// 在页面渲染完成后计算所有导航块需要滚动的高度
 	nextTick(() => {
@@ -126,9 +128,12 @@ onMounted(() => {
 					padding: 16px;
 					border: 1px solid #dcdfe6;
 					border-radius: 4px;
+					cursor: pointer;
 					&:hover {
 						transform: translateY(-5px);
-						box-shadow: var(--el-box-shadow-dark);
+						box-shadow: v-bind(
+							"isDark ? '0px 0px 12px #fff' : 'var(--el-box-shadow-dark)'"
+						);
 					}
 					.main-container-content-card-icon {
 						width: 50px;

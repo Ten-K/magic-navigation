@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ElScrollbar } from "element-plus";
 import menuDataList from "@/data/menuData";
-import { Fold } from "@element-plus/icons-vue";
+import { Picture as IconPicture } from "@element-plus/icons-vue";
 
 useSeoMeta({
 	title: "神奇导航",
@@ -86,7 +86,14 @@ onMounted(() => {
 											class="main-container-content-card-icon"
 											:src="menuChildren.logo"
 											fit="fill"
-										/>
+										>
+											<template #error>
+												<SvgIcon
+													name="fish"
+													class="main-container-content-card-icon"
+												/>
+											</template>
+										</el-image>
 										<SvgIcon
 											v-else
 											:name="(menuChildren.icon as string)"
@@ -109,14 +116,17 @@ onMounted(() => {
 <style scoped lang="scss">
 .layout-container {
 	height: 100vh;
+
 	.el-main {
 		padding: unset;
 		height: auto;
+
 		.main-container {
 			margin: 20px;
 			h4 {
 				margin-bottom: 15px;
 			}
+
 			.main-container-content {
 				display: grid;
 				grid-template-columns: repeat(5, 1fr);
@@ -135,6 +145,7 @@ onMounted(() => {
 							"isDark ? '0px 0px 12px #fff' : 'var(--el-box-shadow-dark)'"
 						);
 					}
+
 					.main-container-content-card-icon {
 						width: 50px;
 						height: 50px;

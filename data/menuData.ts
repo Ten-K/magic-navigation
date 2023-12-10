@@ -129,6 +129,11 @@ const menuDataList = [
 				title: "ES6 入门教程",
 				logo: "https://es6.ruanyifeng.com/favicon.ico",
 				url: "https://es6.ruanyifeng.com"
+			},
+			{
+				title: "JSDoc 入门",
+				icon: "fish",
+				url: "https://jsdoc.bootcss.com/index.html"
 			}
 		]
 	},

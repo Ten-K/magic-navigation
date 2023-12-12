@@ -97,7 +97,7 @@ onMounted(() => {
 										</el-image>
 										<SvgIcon
 											v-else
-											:name="(menuChildren.icon as string)"
+											:name="(menuChildren?.icon as string) || 'fish'"
 											class="main-container-content-card-icon"
 										/>
 										<span class="main-container-content-card-span">{{

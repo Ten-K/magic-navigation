@@ -15,6 +15,11 @@ const menuDataList = [
 				title: "v2ex(科学上网)",
 				logo: "https://www.v2ex.com/static/favicon.ico",
 				url: "https://www.v2ex.com"
+			},
+			{
+				title: "GitHub",
+				logo: "https://github.githubassets.com/favicons/favicon.png",
+				url: "https://github.com"
 			}
 		]
 	},
@@ -132,7 +137,7 @@ const menuDataList = [
 			},
 			{
 				title: "JSDoc 入门",
-				icon: "fish",
+				icon: "",
 				url: "https://jsdoc.bootcss.com/index.html"
 			}
 		]

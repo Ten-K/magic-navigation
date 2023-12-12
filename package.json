@@ -13,6 +13,7 @@
     "@amap/amap-jsapi-types": "^0.0.13",
     "@element-plus/nuxt": "^1.0.7",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "8.0.0-rc.9",
     "element-plus": "^2.4.3",
     "nuxt": "^3.8.2",
     "sass": "^1.69.5",

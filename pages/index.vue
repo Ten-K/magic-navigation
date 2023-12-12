@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { ElScrollbar } from "element-plus";
 import menuDataList from "@/data/menuData";
-import { Picture as IconPicture } from "@element-plus/icons-vue";
 
 useSeoMeta({
 	title: "神奇导航",
@@ -72,7 +71,9 @@ onMounted(() => {
 					<el-scrollbar ref="scrollbarRef">
 						<template v-for="menu in menuDataList" :key="menu.title">
 							<div class="main-container" ref="navBlockItem">
-								<h4>{{ menu.title }}</h4>
+								<h4>
+									{{ useTransformI18n(menu.title) }}
+								</h4>
 								<div class="main-container-content">
 									<div
 										class="main-container-content-card"

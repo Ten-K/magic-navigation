@@ -21,10 +21,10 @@ const { isDark } = useDark();
 				:collapse="isCollapse"
 				@select="(index) => $emit('handle-select', index)"
 			>
-				<template v-for="(item, index) in menuDataList" :key="item.index">
+				<template v-for="(menu, index) in menuDataList" :key="menu.index">
 					<el-menu-item :index="index + ''">
-						<el-icon><component :is="item.icon"></component></el-icon>
-						<template #title>{{ item.title }}</template>
+						<el-icon><component :is="menu.icon"></component></el-icon>
+						<template #title>{{ useTransformI18n(menu.title) }}</template>
 					</el-menu-item>
 				</template>
 			</el-menu>

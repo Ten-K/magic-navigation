@@ -4,11 +4,6 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: ["@element-plus/nuxt"],
-	css: [
-		"element-plus/dist/index.css",
-		"element-plus/theme-chalk/dark/css-vars.css"
-	],
 	app: {
 		head: {
 			script: [
@@ -19,6 +14,14 @@ export default defineNuxtConfig({
 			]
 		}
 	},
+	css: [
+		"element-plus/dist/index.css",
+		"element-plus/theme-chalk/dark/css-vars.css"
+	],
+	modules: ["@element-plus/nuxt", "@nuxtjs/i18n"],
+  i18n: {
+    vueI18n: './i18n.config.ts' // if you are using custom path, default 
+  },
 	vite: {
 		plugins: [
 			createSvgIconsPlugin({

@@ -1,8 +1,20 @@
 <script setup lang="ts">
 import { Fold, Expand } from "@element-plus/icons-vue";
+
 // 是否折叠菜单
 const { isCollapse, toggerCollapse } = useCollapse();
+// 暗黑主题
 const { isDark, toggerDark } = useDark();
+
+// #region 国际化
+const { locale } = useI18n();
+
+// 切换语言
+function toggerLocale() {
+	locale.value === "zh" ? (locale.value = "en") : (locale.value = "zh");
+	localStorageUtil.set("locale", locale.value);
+}
+// #endregion
 </script>
 
 <template>
@@ -12,15 +24,26 @@ const { isDark, toggerDark } = useDark();
 			<el-icon v-else title="收起"><Fold /></el-icon>
 		</div>
 		<div class="el-header-right">
-			<div @click="toggerDark" class="el-header-right-dark" title="主题模式">
-				<SvgIcon v-if="isDark" name="dark" />
-				<SvgIcon v-else name="sun" />
+			<div @click="toggerLocale" class="el-header-right-item" title="切换语言">
+				<SvgIcon
+					v-if="locale === 'zh'"
+					name="chinese"
+					class="el-header-right-item-icon"
+				/>
+				<SvgIcon v-else name="english" class="el-header-right-item-icon" />
+			</div>
+			<div @click="toggerDark" class="el-header-right-item" title="主题模式">
+				<SvgIcon v-if="isDark" name="dark" class="el-header-right-item-icon" />
+				<SvgIcon v-else name="sun" class="el-header-right-item-icon" />
 			</div>
 			<el-link
 				:underline="false"
 				href="https://github.com/Ten-K/magic-navigation"
 				target="_blank"
-				><SvgIcon name="github" />GitHub</el-link
+				><SvgIcon
+					name="github"
+					class="el-header-right-item-icon"
+				/>GitHub</el-link
 			>
 		</div>
 	</el-header>
@@ -45,12 +68,18 @@ const { isDark, toggerDark } = useDark();
 		justify-content: center;
 		align-items: center;
 		color: #606266;
-		.el-header-right-dark {
-      margin-right: 10px;
-      line-height: 50%;
+
+		.el-header-right-item {
+			margin-right: 15px;
+			line-height: 50%;
 			&:hover {
 				@include hoverActive;
 			}
+		}
+
+		.el-header-right-item-icon {
+			width: 24px;
+			height: 24px;
 		}
 	}
 }

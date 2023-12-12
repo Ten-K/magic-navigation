@@ -3,7 +3,7 @@ import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 const menuDataList = [
 	{
-		title: "摸鱼",
+		title: "TouchedFish",
 		icon: IconMenu,
 		children: [
 			{
@@ -19,7 +19,7 @@ const menuDataList = [
 		]
 	},
 	{
-		title: "vue",
+		title: "Vue",
 		icon: IconMenu,
 		children: [
 			{
@@ -138,7 +138,7 @@ const menuDataList = [
 		]
 	},
 	{
-		title: "工程化",
+		title: "Engineering",
 		icon: IconMenu,
 		children: [
 			{
@@ -164,7 +164,7 @@ const menuDataList = [
 		]
 	},
 	{
-		title: "在线影视",
+		title: "OnlineMovie",
 		icon: IconMenu,
 		children: [
 			{

@@ -3,7 +3,7 @@ import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 const menuDataList = [
   {
-    title: "搜索",
+    title: "Search",
 		icon: IconMenu,
   },
 	{

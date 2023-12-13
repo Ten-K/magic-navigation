@@ -60,11 +60,11 @@ const keyword = ref("");
 const searchEngine = ref("baidu");
 const searchEngineOptions = [
 	{
-		label: "百度",
+		label: "百 度",
 		value: "baidu"
 	},
 	{
-		label: "谷歌",
+		label: "谷 歌",
 		value: "google"
 	}
 ];
@@ -193,6 +193,11 @@ onMounted(() => {
 
         :deep(.el-input) {
           height: 48px;
+          text-align: center;
+
+          .el-input__inner {
+            text-align: center;
+          }
         }
       }
 

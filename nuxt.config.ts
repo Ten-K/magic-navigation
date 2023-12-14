@@ -18,15 +18,15 @@ export default defineNuxtConfig({
 		"element-plus/dist/index.css",
 		"element-plus/theme-chalk/dark/css-vars.css"
 	],
-	modules: ["@element-plus/nuxt", "@nuxtjs/i18n"],
-  i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default 
-  },
+	modules: ["@element-plus/nuxt", "@nuxtjs/i18n", '@nuxtjs/robots'],
 	vite: {
 		plugins: [
 			createSvgIconsPlugin({
 				iconDirs: [path.resolve(process.cwd(), "assets/svg")]
 			})
-		]
+		],
+    optimizeDeps: {
+      include: ['element-plus/es/components/**'],
+    }
 	}
 });

@@ -66,11 +66,21 @@ const searchEngineOptions = [
 	{
 		label: "谷 歌",
 		value: "google"
-	}
+	},
+  {
+    label: "必 应",
+    value: "bing"
+  },
+  {
+    label: "掘 金",
+    value: "juejin"
+  }
 ];
 const searchEngineUrlMap = {
 	baidu: "https://www.baidu.com/s?wd=",
-	google: "https://www.google.com/search?q="
+	google: "https://www.google.com/search?q=",
+  bing: "https://www.bing.com/search?q=",
+  juejin: "https://juejin.cn/search?query="
 };
 // 搜索方法
 const search = () => {
@@ -78,6 +88,7 @@ const search = () => {
 	window.open(
 		searchEngineUrlMap[searchEngine.value as searchEngineType] + keyword.value
 	);
+	keyword.value = "";
 };
 
 onMounted(() => {
@@ -105,7 +116,7 @@ onMounted(() => {
 									</h4>
 
 									<div
-										v-if="menu.title === '搜索'"
+										v-if="menu.title === 'Search'"
 										style="height: 60px; display: flex; align-items: center"
 									>
 										<el-input
@@ -134,35 +145,44 @@ onMounted(() => {
 										</el-input>
 									</div>
 									<div v-else class="main-container-content">
-										<div
-											class="main-container-content-card"
+										<template
 											v-for="menuChildren in menu.children"
 											:key="menuChildren.title"
-											@click="handleSelectDoc(menuChildren.url)"
 										>
-											<el-image
-												v-if="menuChildren.logo"
-												lazy
-												class="main-container-content-card-icon"
-												:src="menuChildren.logo"
-												fit="fill"
+											<el-tooltip
+												effect="dark"
+												:content="menuChildren.url"
+												placement="top"
 											>
-												<template #error>
+												<div
+													class="main-container-content-card"
+													@click="handleSelectDoc(menuChildren.url)"
+												>
+													<el-image
+														v-if="menuChildren.logo"
+														lazy
+														class="main-container-content-card-icon"
+														:src="menuChildren.logo"
+														fit="fill"
+													>
+														<template #error>
+															<SvgIcon
+																name="fish"
+																class="main-container-content-card-icon"
+															/>
+														</template>
+													</el-image>
 													<SvgIcon
-														name="fish"
+														v-else
+														:name="(menuChildren?.icon as string) || 'fish'"
 														class="main-container-content-card-icon"
 													/>
-												</template>
-											</el-image>
-											<SvgIcon
-												v-else
-												:name="(menuChildren?.icon as string) || 'fish'"
-												class="main-container-content-card-icon"
-											/>
-											<span class="main-container-content-card-span">{{
-												menuChildren.title
-											}}</span>
-										</div>
+													<span class="main-container-content-card-span">{{
+														menuChildren.title
+													}}</span>
+												</div>
+											</el-tooltip>
+										</template>
 									</div>
 								</div>
 							</div>
@@ -188,18 +208,18 @@ onMounted(() => {
 				margin-bottom: 15px;
 			}
 
-      .input-with-select {
-        width: 115px;
+			.input-with-select {
+				width: 115px;
 
-        :deep(.el-input) {
-          height: 48px;
-          text-align: center;
+				:deep(.el-input) {
+					height: 48px;
+					text-align: center;
 
-          .el-input__inner {
-            text-align: center;
-          }
-        }
-      }
+					.el-input__inner {
+						text-align: center;
+					}
+				}
+			}
 
 			.main-container-content {
 				display: grid;

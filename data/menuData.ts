@@ -158,7 +158,7 @@ const menuDataList = [
 			{
 				title: "Rollup",
 				logo: "https://cn.rollupjs.org/favicon.png",
-				url: "https://cn.rollupjs.org/"
+				url: "https://cn.rollupjs.org"
 			},
 			{
 				title: "Vite",

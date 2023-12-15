@@ -13,6 +13,12 @@ useSeoMeta({
 	keywords: "摸鱼, 导航, 神奇导航, 程序员导航"
 });
 
+// header 的高度
+const HEADER_HEIGHT = 60;
+// 获取所有的导航块
+const navBlockItem = ref<Array<null | HTMLDivElement>>([]);
+// 保存所有的导航块需要滚动的高度
+const scrollHeightArr = ref<number[]>([]);
 // 获取滚动条真实的dom元素
 const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>();
 
@@ -32,15 +38,6 @@ const handleSelectDoc = (url: string) => {
 	window.open(url);
 };
 
-// header 的高度
-const HEADER_HEIGHT = 60;
-
-// 获取所有的导航块
-const navBlockItem = ref<Array<null | HTMLDivElement>>([]);
-
-// 保存所有的导航块需要滚动的高度
-const scrollHeightArr = ref<number[]>([]);
-
 // 计算所有导航块需要滚动的高度
 const getScrollHeightArr = () => {
 	navBlockItem.value.forEach((item) => {
@@ -52,8 +49,15 @@ const getScrollHeightArr = () => {
 	});
 };
 
-const { isDark } = useDark();
+onMounted(() => {
+	// 在页面渲染完成后计算所有导航块需要滚动的高度
+	nextTick(() => {
+		getScrollHeightArr();
+	});
+});
 
+// 是否处于暗黑主题
+const { isDark } = useDark();
 // 搜索关键字
 const keyword = ref("");
 // 搜索引擎
@@ -67,21 +71,22 @@ const searchEngineOptions = [
 		label: "谷 歌",
 		value: "google"
 	},
-  {
-    label: "必 应",
-    value: "bing"
-  },
-  {
-    label: "掘 金",
-    value: "juejin"
-  }
+	{
+		label: "必 应",
+		value: "bing"
+	},
+	{
+		label: "掘 金",
+		value: "juejin"
+	}
 ];
 const searchEngineUrlMap = {
 	baidu: "https://www.baidu.com/s?wd=",
 	google: "https://www.google.com/search?q=",
-  bing: "https://www.bing.com/search?q=",
-  juejin: "https://juejin.cn/search?query="
+	bing: "https://www.bing.com/search?q=",
+	juejin: "https://juejin.cn/search?query="
 };
+
 // 搜索方法
 const search = () => {
 	if (!keyword.value) return;
@@ -90,13 +95,6 @@ const search = () => {
 	);
 	keyword.value = "";
 };
-
-onMounted(() => {
-	// 在页面渲染完成后计算所有导航块需要滚动的高度
-	nextTick(() => {
-		getScrollHeightArr();
-	});
-});
 </script>
 
 <template>

@@ -148,8 +148,9 @@ const search = () => {
 											:key="menuChildren.title"
 										>
 											<el-tooltip
-												effect="dark"
 												:content="menuChildren.url"
+                        :show-after="200"
+												effect="dark"
 												placement="top"
 											>
 												<div

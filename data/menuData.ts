@@ -186,6 +186,11 @@ const menuDataList = [
 				logo: "https://oss-cdn.meowa.cn/mxtheme/images/favicon.png",
 				url: "https://www.yinhuadm.cc"
 			},
+			{
+				title: "风车动漫",
+				logo: "https://dm530.org/static/favicon.ico",
+				url: "https://dm530.org/"
+			},
       {
         
         title: "999影视",

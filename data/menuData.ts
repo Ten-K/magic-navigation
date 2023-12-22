@@ -1,4 +1,3 @@
-import ChatbotUi from "~/assets/chatbot-ui.ico";
 import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 const menuDataList = [
@@ -205,7 +204,7 @@ const menuDataList = [
 		children: [
 			{
 				title: "Chatbot UI",
-				logo: ChatbotUi,
+				logo: "https://registry.npmmirror.com/@lobehub/assets-favicons/1.4.0/files/assets/favicon.ico",
 				url: "https://chat.aivvm.com/chat"
 			}
 		]

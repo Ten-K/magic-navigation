@@ -118,9 +118,19 @@ const menuDataList = [
 				url: "https://tailwindcss.com"
 			},
 			{
+				title: "CSS Grid Generator",
+				logo: "https://cssgrid-generator.netlify.app/favicon.ico",
+				url: "https://cssgrid-generator.netlify.app/"
+			},
+			{
 				title: "Tailwind Css Cheat Sheet",
 				logo: "https://nerdcave.com/tailwind-cheat-sheet/favicon.ico",
 				url: "https://nerdcave.com/tailwind-cheat-sheet"
+			},
+			{
+				title: "Can I use",
+				logo: "https://caniuse.com/img/favicon-128.png",
+				url: "https://caniuse.com/"
 			}
 		]
 	},
@@ -187,7 +197,7 @@ const menuDataList = [
 			},
 			{
 				title: "风车动漫",
-				logo: "https://dm530.org/static/favicon.ico",
+				logo: "",
 				url: "https://dm530.org/"
 			},
       {
@@ -203,9 +213,30 @@ const menuDataList = [
 		icon: IconMenu,
 		children: [
 			{
-				title: "Chatbot UI",
+				title: "LobeChat",
 				logo: "https://registry.npmmirror.com/@lobehub/assets-favicons/1.4.0/files/assets/favicon.ico",
 				url: "https://chat.aivvm.com/chat"
+			},
+      {
+				title: "Poe Chat(科学上网)",
+				icon: "poe",
+				url: "https://poe.com/explore"
+			}
+		]
+	},
+	{
+		title: "免费 Api",
+		icon: IconMenu,
+		children: [
+			{
+				title: "UomgAPI",
+				logo: "",
+				url: "https://api.uomg.com"
+			},
+      {
+				title: "教书先生API",
+				logo: "https://api.oioweb.cn/favicon.ico",
+				url: "https://api.oioweb.cn"
 			}
 		]
 	}

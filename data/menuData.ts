@@ -225,7 +225,7 @@ const menuDataList = [
 		]
 	},
 	{
-		title: "免费 Api",
+		title: "FreeApi",
 		icon: IconMenu,
 		children: [
 			{

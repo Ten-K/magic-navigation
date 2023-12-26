@@ -195,16 +195,22 @@ const menuDataList = [
 				logo: "https://oss-cdn.meowa.cn/mxtheme/images/favicon.png",
 				url: "https://www.yinhuadm.cc"
 			},
+      {
+        
+        title: "茶杯狐影视",
+				logo: "https://picx.zhimg.com/80/v2-5393cb76a824b11d7771ecdce592c87d.png",
+				url: "https://cupfox.love"
+      },
 			{
 				title: "风车动漫",
 				logo: "",
-				url: "https://dm530.org/"
+				url: "https://dm530.org"
 			},
       {
         
         title: "999影视",
 				icon: "",
-				url: "https://www.999ys.top/"
+				url: "https://www.999ys.top"
       }
 		]
 	},

@@ -219,7 +219,7 @@ const menuDataList = [
 		icon: IconMenu,
 		children: [
 			{
-				title: "LobeChat",
+				title: "LobeChat(科学上网)",
 				logo: "https://registry.npmmirror.com/@lobehub/assets-favicons/1.4.0/files/assets/favicon.ico",
 				url: "https://chat.aivvm.com/chat"
 			},
@@ -243,6 +243,11 @@ const menuDataList = [
 				title: "教书先生API",
 				logo: "https://api.oioweb.cn/favicon.ico",
 				url: "https://api.oioweb.cn"
+			},
+      {
+				title: "宋子宪免费API",
+				logo: "",
+				url: "https://api.songzixian.com/"
 			}
 		]
 	}

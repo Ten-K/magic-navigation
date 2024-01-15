@@ -10,15 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@amap/amap-jsapi-types": "^0.0.13",
     "@element-plus/nuxt": "^1.0.7",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.4.4",
-    "nuxt": "^3.8.2",
-    "sass": "^1.69.5",
+    "element-plus": "^2.5.1",
+    "nuxt": "^3.9.1",
+    "sass": "^1.69.7",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.3.13",
+    "vue": "^3.4.13",
     "vue-router": "^4.2.5"
   },
   "dependencies": {

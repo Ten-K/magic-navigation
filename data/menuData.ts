@@ -1,10 +1,10 @@
 import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 const menuDataList = [
-  {
-    title: "Search",
-		icon: IconMenu,
-  },
+	{
+		title: "Search",
+		icon: IconMenu
+	},
 	{
 		title: "TouchedFish",
 		icon: IconMenu,
@@ -23,6 +23,11 @@ const menuDataList = [
 				title: "GitHub",
 				logo: "https://github.githubassets.com/favicons/favicon.png",
 				url: "https://github.com"
+			},
+			{
+				title: "Twitter(科学上网)",
+				logo: "https://abs.twimg.com/favicons/twitter.3.ico",
+				url: "https://twitter.com"
 			}
 		]
 	},
@@ -195,23 +200,21 @@ const menuDataList = [
 				logo: "https://oss-cdn.meowa.cn/mxtheme/images/favicon.png",
 				url: "https://www.yinhuadm.cc"
 			},
-      {
-        
-        title: "茶杯狐影视",
+			{
+				title: "茶杯狐影视",
 				logo: "https://picx.zhimg.com/80/v2-5393cb76a824b11d7771ecdce592c87d.png",
 				url: "https://cupfox.love"
-      },
+			},
 			{
 				title: "风车动漫",
 				logo: "",
 				url: "https://dm530.org"
 			},
-      {
-        
-        title: "999影视",
+			{
+				title: "999影视",
 				icon: "",
 				url: "https://www.999ys.top"
-      }
+			}
 		]
 	},
 	{
@@ -223,10 +226,15 @@ const menuDataList = [
 				logo: "https://registry.npmmirror.com/@lobehub/assets-favicons/1.4.0/files/assets/favicon.ico",
 				url: "https://chat.aivvm.com/chat"
 			},
-      {
+			{
 				title: "Poe Chat(科学上网)",
 				icon: "poe",
 				url: "https://poe.com/explore"
+			},
+			{
+				title: "Kimi",
+				logo: "https://kimi.moonshot.cn/favicon.ico",
+				url: "https://kimi.moonshot.cn"
 			}
 		]
 	},
@@ -239,15 +247,20 @@ const menuDataList = [
 				logo: "",
 				url: "https://api.uomg.com"
 			},
-      {
+			{
 				title: "教书先生API",
 				logo: "https://api.oioweb.cn/favicon.ico",
 				url: "https://api.oioweb.cn"
 			},
-      {
+			{
 				title: "宋子宪免费API",
 				logo: "",
-				url: "https://api.songzixian.com/"
+				url: "https://api.songzixian.com"
+			},
+			{
+				title: "哔哩哔哩API",
+				logo: "https://socialsisteryi.github.io/bilibili-API-collect/assets/logo-bba15bcf.png",
+				url: "https://socialsisteryi.github.io/bilibili-API-collect"
 			}
 		]
 	}

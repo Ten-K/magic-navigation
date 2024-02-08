@@ -201,16 +201,26 @@ const search = () => {
 		padding: unset;
 		height: auto;
 
-		.main-container {
+		:deep(.main-container) {
 			margin: 20px;
 			h4 {
 				margin-bottom: 15px;
 			}
 
+			.el-input-group__append,
+			.el-input-group__prepend {
+				background: unset;
+			}
+
 			.input-with-select {
 				width: 115px;
 
-				:deep(.el-input) {
+				.el-select__wrapper {
+					text-align: center;
+					box-shadow: unset;
+				}
+
+				.el-input {
 					height: 48px;
 					text-align: center;
 

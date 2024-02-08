@@ -5,7 +5,6 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: [
-		"element-plus/dist/index.css",
 		"element-plus/theme-chalk/dark/css-vars.css"
 	],
 	modules: ["@element-plus/nuxt", "@nuxtjs/i18n", "@nuxtjs/robots"],

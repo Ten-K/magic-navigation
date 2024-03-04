@@ -12,6 +12,7 @@ import rollup from "~/assets/images/rollup.png";
 import cupfox from "~/assets/images/cupfox.png";
 import kimiai from "~/assets/images/kimiai.ico";
 import oioweb from "~/assets/images/oioweb.ico";
+import fenche from '~/assets/images/fenche.jpg';
 import caniuse from "~/assets/images/caniuse.png";
 import twitter from "~/assets/images/twitter.ico";
 import cssGrid from "~/assets/images/css-grid.ico";
@@ -228,7 +229,7 @@ const menuDataList = [
 			},
 			{
 				title: "风车动漫",
-				logo: "",
+				logo: fenche,
 				url: "https://dm530.org"
 			},
 			{

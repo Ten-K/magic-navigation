@@ -12,7 +12,8 @@ import rollup from "~/assets/images/rollup.png";
 import cupfox from "~/assets/images/cupfox.png";
 import kimiai from "~/assets/images/kimiai.ico";
 import oioweb from "~/assets/images/oioweb.ico";
-import fenche from '~/assets/images/fenche.jpg';
+import fenche from "~/assets/images/fenche.jpg";
+import fre123 from "~/assets/images/fre123.png";
 import caniuse from "~/assets/images/caniuse.png";
 import twitter from "~/assets/images/twitter.ico";
 import cssGrid from "~/assets/images/css-grid.ico";
@@ -236,6 +237,11 @@ const menuDataList = [
 				title: "999影视",
 				icon: "",
 				url: "https://www.999ys.top"
+			},
+			{
+				title: "FRE123 动漫搜索引擎",
+				logo: fre123,
+				url: "https://www.fre123.com/anime/n"
 			}
 		]
 	},

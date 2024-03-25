@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import menuDataList from "@/data/menu";
 import { ElScrollbar } from "element-plus";
-import menuDataList from "@/data/menuData";
 import { Search } from "@element-plus/icons-vue";
 
 type searchEngineType = keyof typeof searchEngineUrlMap;
@@ -34,7 +34,8 @@ const handleSelect = (index: string) => {
 };
 
 // 跳转到点击的文档
-const handleSelectDoc = (url: string) => {
+const handleSelectDoc = (url = '') => {
+  if (!url) return;
 	window.open(url);
 };
 

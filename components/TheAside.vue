@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import menuDataList from "@/data/menuData";
+import menuDataList from "@/data/menu";
 
 defineEmits<{
 	"handle-select": [key: string];

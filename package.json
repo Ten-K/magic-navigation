@@ -10,15 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.7",
+    "@element-plus/icons-vue": "^2.3.1",
+    "@element-plus/nuxt": "^1.0.8",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.5.5",
-    "nuxt": "^3.10.1",
-    "sass": "^1.70.0",
+    "element-plus": "^2.7.0",
+    "nuxt": "^3.11.2",
+    "sass": "^1.75.0",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue": "^3.4.23",
+    "vue-router": "^4.3.1"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0"

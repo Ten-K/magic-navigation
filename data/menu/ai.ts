@@ -1,6 +1,7 @@
 import lobe from "~/assets/images/lobe.ico";
 import kimiai from "~/assets/images/kimiai.ico";
 import WaytoAGI from '~/assets/images/waytoagi.ico';
+import Gemini from '~/assets/svg/gemini.svg';
 import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 export default {
@@ -16,6 +17,11 @@ export default {
       title: "Poe Chat(科学上网)",
       icon: "poe",
       url: "https://poe.com/explore"
+    },
+    {
+      title: "Gemini(科学上网)",
+      logo: Gemini,
+      url: "https://gemini.google.com"
     },
     {
       title: "Kimi",

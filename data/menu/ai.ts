@@ -1,7 +1,7 @@
 import lobe from "~/assets/images/lobe.ico";
+import Gemini from '~/assets/svg/gemini.svg';
 import kimiai from "~/assets/images/kimiai.ico";
 import WaytoAGI from '~/assets/images/waytoagi.ico';
-import Gemini from '~/assets/svg/gemini.svg';
 import { Menu as IconMenu } from "@element-plus/icons-vue";
 
 export default {

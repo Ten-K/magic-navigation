@@ -1,12 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import path from "path";
+import { defineNuxtConfig } from 'nuxt/config'
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	css: [
-		"element-plus/theme-chalk/dark/css-vars.css"
-	],
+	css: ["element-plus/theme-chalk/dark/css-vars.css"],
 	modules: ["@element-plus/nuxt", "@nuxtjs/i18n", "@nuxtjs/robots"],
 	vite: {
 		plugins: [
@@ -15,7 +14,11 @@ export default defineNuxtConfig({
 			})
 		],
 		optimizeDeps: {
-			include: ["element-plus/es/components/**", "@element-plus/icons-vue"]
+			include: [
+				"element-plus/es/components/**",
+				"@element-plus/icons-vue",
+				"@unhead/vue"
+			]
 		}
 	}
 });

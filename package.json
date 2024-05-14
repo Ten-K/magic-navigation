@@ -1,7 +1,12 @@
 {
   "name": "nuxt-app",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20.13.1",
+    "pnpm": ">=9"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,11 +19,11 @@
     "@element-plus/nuxt": "^1.0.9",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.7.1",
+    "element-plus": "^2.7.3",
     "nuxt": "^3.11.2",
-    "sass": "^1.75.0",
+    "sass": "^1.77.1",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.4.23",
+    "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "dependencies": {

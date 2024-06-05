@@ -12,7 +12,7 @@ export default {
     {
       title: "LobeChat(科学上网)",
       logo: lobe,
-      url: "https://chat.aivvm.com/chat"
+      url: "https://chat-preview.lobehub.com/welcome"
     },
     {
       title: "Poe Chat(科学上网)",

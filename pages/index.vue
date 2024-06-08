@@ -34,8 +34,8 @@ const handleSelect = (index: string) => {
 };
 
 // 跳转到点击的文档
-const handleSelectDoc = (url = '') => {
-  if (!url) return;
+const handleSelectDoc = (url = "") => {
+	if (!url) return;
 	window.open(url);
 };
 

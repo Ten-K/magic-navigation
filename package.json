@@ -19,9 +19,9 @@
     "@element-plus/nuxt": "^1.0.9",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.7.3",
+    "element-plus": "^2.7.5",
     "nuxt": "^3.11.2",
-    "sass": "^1.77.1",
+    "sass": "^1.77.4",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"

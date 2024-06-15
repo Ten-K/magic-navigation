@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20.13.1",
-    "pnpm": ">=9"
+    "node": ">=18.18.0"
   },
   "scripts": {
     "build": "nuxt build",
@@ -20,11 +19,11 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
     "element-plus": "^2.7.5",
-    "nuxt": "^3.11.2",
-    "sass": "^1.77.4",
+    "nuxt": "^3.12.1",
+    "sass": "^1.77.5",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0"

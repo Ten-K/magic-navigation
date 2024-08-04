@@ -96,6 +96,10 @@ const search = () => {
 	);
 	keyword.value = "";
 };
+
+const transform = (title: string) => {
+  return useTransformI18n(title)
+}
 </script>
 
 <template>
@@ -111,7 +115,7 @@ const search = () => {
 							<div ref="navBlockItem">
 								<div class="main-container">
 									<h4>
-										{{ useTransformI18n(menu.title) }}
+										{{ transform(menu.title) }}
 									</h4>
 
 									<div

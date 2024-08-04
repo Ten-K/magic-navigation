@@ -8,7 +8,7 @@ type localeItem = keyof (typeof messages)["zh"];
  * @param message i18n message
  * @returns {string} translated message
  */
-export const useTransformI18n = (message: string) => {
+export const useTransformI18n = (message: string): string => {
 	const { locale } = useI18n();
 	locale.value = localStorageUtil.get("locale") ?? "zh";
 	return messages[locale.value as localeType][message as localeItem] ?? message;

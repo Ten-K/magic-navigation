@@ -3,7 +3,7 @@
  */
 export const useDark = () => {
 	// 兼容ssr
-	if (!process.client) return { isDark: false };
+	if (!isClient) return { isDark: false };
 
 	const isDark = useState("isDark", () => {
 		return (

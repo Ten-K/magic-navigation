@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@element-plus/nuxt": "^1.0.9",
+    "@element-plus/nuxt": "^1.1.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.7.5",
-    "nuxt": "^3.12.1",
-    "sass": "^1.77.5",
+    "element-plus": "^2.8.7",
+    "nuxt": "^3.13.2",
+    "sass": "^1.80.6",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.4.29",
-    "vue-router": "^4.3.3"
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0"

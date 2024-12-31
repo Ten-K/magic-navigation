@@ -7,7 +7,7 @@
     "node": ">=18.18.0",
     "pnpm": ">=9.4.0"
   },
-  "packageManager": "pnpm@8.15.8",
+  "packageManager": "pnpm@9.14.4",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@element-plus/nuxt": "^1.1.0",
+    "@element-plus/nuxt": "^1.1.1",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.9",
-    "element-plus": "^2.8.7",
-    "nuxt": "^3.13.2",
-    "sass": "^1.80.6",
+    "element-plus": "^2.9.1",
+    "nuxt": "^3.15.0",
+    "sass": "^1.83.0",
     "vite-plugin-svg-icons": "^2.0.1",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0"

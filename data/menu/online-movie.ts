@@ -37,7 +37,7 @@ export default {
     {
       title: "FRE123 动漫搜索引擎",
       logo: fre123,
-      url: "https://www.fre123.com/anime/n"
+      url: "https://www.fre321.com/anime/s"
     }
   ]
 }
